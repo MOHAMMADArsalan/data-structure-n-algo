@@ -11,6 +11,22 @@ function findNumberIn2DArray(array, target) {
 }
 
 
+function findNumberIn2DArray2(array, target) {
+    let row = 0, col = array[0].length - 1;
+
+    while (row < array.length && col >= 0) {
+        if (array[row][col] === target) return [row, col];
+        else if (array[row][col] < target) {
+            row++;
+        } else {
+            col--;
+        }
+    }
+
+    return [-1, -1];
+
+
+}
 
 const array = [
     [1, 2, 3, 4],
